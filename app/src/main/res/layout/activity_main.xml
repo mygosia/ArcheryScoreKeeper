@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bck3" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            android:maxWidth="70dp"
+            android:src="@drawable/background"
+            android:layout_gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player A"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/person_a_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:textColor="@color/colorPrimary"
+                    android:textStyle="bold"
+                    android:text="0" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:background="#fedb21"
+                    android:onClick="addNineA"
+                    android:text="9 points" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ee1c25"
+                    android:onClick="addSevenA"
+                    android:text="7 points"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#355bb1"
+                    android:onClick="addFiveA"
+                    android:text="5 points"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#201e1f"
+                    android:onClick="addThreeA"
+                    android:text="3 points"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    android:onClick="addOneA"
+                    android:text="1 point" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Player B"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/person_b_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="25sp"
+                    android:text="0"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorPrimary"/>
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#fedb21"
+                    android:onClick="addNineB"
+                    android:text="9 points" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ee1c25"
+                    android:onClick="addSevenB"
+                    android:text="7 points"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#355bb1"
+                    android:onClick="addFiveB"
+                    android:text="5 points"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    style="@style/buttonPort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#201e1f"
+                    android:onClick="addThreeB"
+                    android:text="3 points"
+                    android:textColor="@color/colorPrimary" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/buttonPort"
+                    android:background="#fff"
+                    android:onClick="addOneB"
+                    android:text="1 point" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:onClick="resetScores"
+            android:text="RESET"
+            android:background="@color/button"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+</RelativeLayout>
