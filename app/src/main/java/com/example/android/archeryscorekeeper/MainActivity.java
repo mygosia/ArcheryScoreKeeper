@@ -7,6 +7,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    static final String STATE_SCORETEAMA = "scoreTeamA";
+    static final String STATE_SCORETEAMB = "scoreTeamB";
+
     int scoreA = 0;
     int scoreB = 0;
 
@@ -15,6 +18,29 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current score state
+        savedInstanceState.putInt(STATE_SCORETEAMA, scoreA);
+        savedInstanceState.putInt(STATE_SCORETEAMB, scoreB);
+
+        // Always call the superclass so it can save the view hierarchy state
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore state members from saved instance
+        scoreA = savedInstanceState.getInt(STATE_SCORETEAMA);
+        scoreB = savedInstanceState.getInt(STATE_SCORETEAMB);
+
+        displayForPersonA(scoreA);
+        displayForPersonB(scoreB);
+    }
+
 
     /**
      * Displays the given score for Person A.
